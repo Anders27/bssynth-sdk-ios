@@ -190,26 +190,6 @@ enum
 	BSMP_FILE_FORMAT_SMF_1,
 	BSMP_FILE_FORMAT_SMF_2, /* <not supported> */
 
-	BSMP_FILE_FORMAT_MCOMP_SMF0 = 0x0010, /* <customized version only> */
-	BSMP_FILE_FORMAT_MCOMP_SMF1, /* <customized version only> */
-	BSMP_FILE_FORMAT_MCOMP_SMF2, /* <customized version only> */
-	BSMP_FILE_FORMAT_MCOMP_MFMP, /* <customized version only> */
-
-	BSMP_FILE_FORMAT_SMAF_MA2 = 0x0020, /* <customized version only> */
-	BSMP_FILE_FORMAT_SMAF_MA3, /* <customized version only> */
-
-	BSMP_FILE_FORMAT_MFi_1 = 0x0030, /* <customized version only> */
-	BSMP_FILE_FORMAT_MFi_2, /* <customized version only> */
-	BSMP_FILE_FORMAT_MFi_3, /* <customized version only> */
-	BSMP_FILE_FORMAT_MFi_4, /* <customized version only> */
-	BSMP_FILE_FORMAT_MFi_5, /* <customized version only> */
-
-	BSMP_FILE_FORMAT_MFMP = 0x0040, /* <customized version only> */
-
-	BSMP_FILE_FORMAT_CMX = 0x0050, /* <customized version only> */
-
-	BSMP_FILE_FORMAT_MCDF = 0x0060, /* <customized version only> */
-
 	/* port selection method <customized version only> */
 	BSMP_PORT_SELECTION_METHOD_N = 0,
 	BSMP_PORT_SELECTION_METHOD_V,

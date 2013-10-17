@@ -121,6 +121,8 @@
 		E857CF1C1804DBFC0088D963 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E86A9D07180E35C400746BF9 /* libbsmpd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbsmpd.a; sourceTree = "<group>"; };
 		E86A9D08180E35C400746BF9 /* libbsse.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbsse.a; sourceTree = "<group>"; };
+		E8FCEC2418100DF900FAD134 /* libbsmpd_specification_eng.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = libbsmpd_specification_eng.pdf; sourceTree = "<group>"; };
+		E8FCEC2518100DF900FAD134 /* libbsmpd_specification_jpn.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = libbsmpd_specification_jpn.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,6 +303,7 @@
 		E857CEF8180461D60088D963 /* bssynth */ = {
 			isa = PBXGroup;
 			children = (
+				E8FCEC2318100DF900FAD134 /* document */,
 				E857CEF9180461D60088D963 /* bsmd.h */,
 				E857CEFA180461D60088D963 /* bsmp.h */,
 				E86A9D07180E35C400746BF9 /* libbsmpd.a */,
@@ -346,6 +349,15 @@
 				E857CF0D180461DE0088D963 /* GU1.43 Percussion Map.pdf */,
 			);
 			path = "instrument lists";
+			sourceTree = "<group>";
+		};
+		E8FCEC2318100DF900FAD134 /* document */ = {
+			isa = PBXGroup;
+			children = (
+				E8FCEC2418100DF900FAD134 /* libbsmpd_specification_eng.pdf */,
+				E8FCEC2518100DF900FAD134 /* libbsmpd_specification_jpn.pdf */,
+			);
+			path = document;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
