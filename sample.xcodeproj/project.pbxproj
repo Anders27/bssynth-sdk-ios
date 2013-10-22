@@ -699,7 +699,7 @@
 				INFOPLIST_FILE = "sample/sample-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/hideo/bismark/iOS_bssynth_sdk/bssynth,
+					"\"$(SRCROOT)/bssynth\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -716,7 +716,7 @@
 				INFOPLIST_FILE = "sample/sample-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/hideo/bismark/iOS_bssynth_sdk/bssynth,
+					"\"$(SRCROOT)/bssynth\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -779,7 +779,7 @@
 				INFOPLIST_FILE = "sample2/sample2-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/hideo/bismark/iOS_bssynth_sdk/bssynth,
+					"\"$(SRCROOT)/bssynth\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -796,7 +796,7 @@
 				INFOPLIST_FILE = "sample2/sample2-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/hideo/bismark/iOS_bssynth_sdk/bssynth,
+					"\"$(SRCROOT)/bssynth\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
