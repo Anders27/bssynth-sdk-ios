@@ -59,7 +59,7 @@
     unsigned long totaltick;
     appDelegate.api->getFileInfo (appDelegate.handle, NULL, &division, &totaltick, NULL);
     NSInteger clocks = totaltick * 24 / division;
-    NSLog (@"total %lu tick = %d MIDI clocks", totaltick, clocks);
+    NSLog (@"total %lu tick = %ld MIDI clocks", totaltick, (long)clocks);
     [self.seekSlider setMaximumValue:clocks];
   }
   
