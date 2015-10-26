@@ -2,7 +2,7 @@
 
 ##About This Library
 
-This is wabe-table based software synthesizer library, which is developed for iOS app called "bs-16i" (https://itunes.apple.com/app/bismark-bs-16i/id388149926?mt=8).
+This is wave-table based software synthesizer library, which is developed for iOS app called "bs-16i" (https://itunes.apple.com/app/bismark-bs-16i/id388149926?mt=8).
 
 ##License Key Code
 
