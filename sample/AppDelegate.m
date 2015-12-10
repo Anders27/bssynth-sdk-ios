@@ -109,10 +109,18 @@ static void myCallback (BSMP_HANDLE handle, BSMP_CALLBACK_TYPE type, void *data,
       self.clocks++;
       break;
     case BSMP_CALLBACK_TYPE_TEMPO:
+#if __LP64__
+      NSLog (@"tempo = %u[usec/beat]", *(unsigned int *) data);
+#else
       NSLog (@"tempo = %lu[usec/beat]", *(unsigned long *) data);
+#endif
       break;
     case BSMP_CALLBACK_TYPE_TIME_SIGNATURE:
+#if __LP64__
+      NSLog (@"set time signature = %u", *(unsigned int *) data);
+#else
       NSLog (@"set time signature = %lu", *(unsigned long *) data);
+#endif
       break;
     case BSMP_CALLBACK_TYPE_CHANNEL_MESSAGE:
 /*
