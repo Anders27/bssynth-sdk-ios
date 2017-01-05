@@ -107,7 +107,7 @@ typedef enum
 	BSMP_CTRL_SET_POLY = 210,
 	BSMP_CTRL_GET_POLY,
 
-	/* crse controls: 10000 - 19999 */
+	/* bsse controls: 10000 - 19999 */
 	BSMP_CTRL_GET_FREE_VOICES = 10000, /* <private only> */
 	BSMP_CTRL_GET_PLAY_VOICES, /* <private only> */
 	BSMP_CTRL_GET_RELEASE_VOICES, /* <private only> */
@@ -149,8 +149,8 @@ typedef enum
 	BSMP_CTRL_UGA_GET_TRACK_TYPE = 29100,  /* <customized version only> */
 
 	/* internal use only: 99900 - 99999 */
-	BSMP_CTRL_GET_CRSE_FUNC = 99900, /* <private only> */
-	BSMP_CTRL_GET_CRSE_HANDLE, /* <private only> */
+	BSMP_CTRL_GET_BSSE_FUNC = 99900, /* <private only> */
+	BSMP_CTRL_GET_BSSE_HANDLE, /* <private only> */
 } BSMP_CTRL;
 
 typedef enum
