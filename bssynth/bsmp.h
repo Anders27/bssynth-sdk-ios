@@ -107,7 +107,7 @@ typedef enum
 	BSMP_CTRL_SET_POLY = 210,
 	BSMP_CTRL_GET_POLY,
 
-	/* bsse controls: 10000 - 19999 */
+	/* crse controls: 10000 - 19999 */
 	BSMP_CTRL_GET_FREE_VOICES = 10000, /* <private only> */
 	BSMP_CTRL_GET_PLAY_VOICES, /* <private only> */
 	BSMP_CTRL_GET_RELEASE_VOICES, /* <private only> */
@@ -147,10 +147,12 @@ typedef enum
 
 	BSMP_CTRL_SEGA_GET_ABSOLUTE_TIME_FOR_FIRST_EVENT = 29000,  /* <customized version only> */
 	BSMP_CTRL_UGA_GET_TRACK_TYPE = 29100,  /* <customized version only> */
+	BSMP_CTRL_KY_SET_RHYTHM_CHANGE_TYPE = 29200,  /* <customized version only> */
+	BSMP_CTRL_KY_GET_RHYTHM_CHANGE_TYPE,  /* <customized version only> */
 
 	/* internal use only: 99900 - 99999 */
-	BSMP_CTRL_GET_BSSE_FUNC = 99900, /* <private only> */
-	BSMP_CTRL_GET_BSSE_HANDLE, /* <private only> */
+	BSMP_CTRL_GET_CRSE_FUNC = 99900, /* <private only> */
+	BSMP_CTRL_GET_CRSE_HANDLE, /* <private only> */
 } BSMP_CTRL;
 
 typedef enum
@@ -162,17 +164,17 @@ typedef enum
 	BSMP_CALLBACK_TYPE_CLOSE,
 
 	BSMP_CALLBACK_TYPE_START = 10,
-	BSMP_CALLBACK_TYPE_STOP, /* (unsigned long *) errorcode */
+	BSMP_CALLBACK_TYPE_STOP, /* (UInt32 *) errorcode */
 	BSMP_CALLBACK_TYPE_SEEK,
 
 	BSMP_CALLBACK_TYPE_CLOCK = 30,
-	BSMP_CALLBACK_TYPE_TEMPO, /* (unsigned long *) usecPerBeat */
-	BSMP_CALLBACK_TYPE_TIME_SIGNATURE, /* (unsigned long *) (nn/dd/cc/bb) */
+	BSMP_CALLBACK_TYPE_TEMPO, /* (UInt32 *) usecPerBeat */
+	BSMP_CALLBACK_TYPE_TIME_SIGNATURE, /* (UInt32 *) (nn/dd/cc/bb) */
 	
-	BSMP_CALLBACK_TYPE_CHANNEL_MESSAGE, /* (unsigned long *) (port/status/data0/data1) */
-	BSMP_CALLBACK_TYPE_SYSTEM_EXCLUSIVE_MESSAGE, /* (unsigned char *) (data) */
+	BSMP_CALLBACK_TYPE_CHANNEL_MESSAGE, /* (UInt32 *) (port/status/data0/data1) */
+	BSMP_CALLBACK_TYPE_SYSTEM_EXCLUSIVE_MESSAGE, /* (UInt8 *) (data) */
 	
-	BSMP_CALLBACK_TYPE_KT_CHORUS = 100, /* * (unsigned long *) chorusNumber, <customized version only> */
+	BSMP_CALLBACK_TYPE_KT_CHORUS = 100, /* * (UInt32 *) chorusNumber, <customized version only> */
 } BSMP_CALLBACK_TYPE;
 
 typedef enum

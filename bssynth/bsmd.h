@@ -103,7 +103,7 @@ typedef enum
 	BSMD_CTRL_SET_POLY = 210,
 	BSMD_CTRL_GET_POLY,
 
-	/* bsse controls: 10000 - 19999 */
+	/* crse controls: 10000 - 19999 */
 	BSMD_CTRL_GET_FREE_VOICES = 10000,
 	BSMD_CTRL_GET_PLAY_VOICES,
 	BSMD_CTRL_GET_RELEASE_VOICES,
@@ -142,8 +142,8 @@ typedef enum
 	BSMD_CTRL_GET_AUDIO_UNIT = 37000, /* <iOS only> */
 
 	/* internal use only: 99900 - 99999 */
-	BSMD_CTRL_GET_BSSE_FUNC = 99900,
-	BSMD_CTRL_GET_BSSE_HANDLE,
+	BSMD_CTRL_GET_CRSE_FUNC = 99900,
+	BSMD_CTRL_GET_CRSE_HANDLE,
 } BSMD_CTRL;
 
 typedef enum
@@ -155,7 +155,7 @@ typedef enum
 	BSMD_CALLBACK_TYPE_CLOSE, /* [reserved only] */
 
 	BSMD_CALLBACK_TYPE_START = 10, /* - */
-	BSMD_CALLBACK_TYPE_STOP, /* (DWORD *) errorcode */
+	BSMD_CALLBACK_TYPE_STOP, /* (UInt32 *) errorcode */
 	BSMD_CALLBACK_TYPE_FRAME,
 
 	BSMD_CALLBACK_TYPE_FILE_START = 20,
@@ -163,11 +163,11 @@ typedef enum
 	BSMD_CALLBACK_TYPE_FILE_SEEK,
 
 	BSMD_CALLBACK_TYPE_CLOCK = 30, /* - */
-	BSMD_CALLBACK_TYPE_TEMPO, /* (DWORD *) usecPerBeat */
-	BSMD_CALLBACK_TYPE_TIME_SIGNATURE, /* (unsigned long *) (nn/dd/cc/bb) */
+	BSMD_CALLBACK_TYPE_TEMPO, /* (UInt32 *) usecPerBeat */
+	BSMD_CALLBACK_TYPE_TIME_SIGNATURE, /* (UInt32 *) (nn/dd/cc/bb) */
 
-	BSMD_CALLBACK_TYPE_CHANNEL_MESSAGE, /* (unsigned long *) (port/status/data0/data1) */
-	BSMD_CALLBACK_TYPE_SYSTEM_EXCLUSIVE_MESSAGE, /* (unsigned char *) (data) */
+	BSMD_CALLBACK_TYPE_CHANNEL_MESSAGE, /* (UInt32 *) (port/status/data0/data1) */
+	BSMD_CALLBACK_TYPE_SYSTEM_EXCLUSIVE_MESSAGE, /* (UInt8 *) (data) */
 } BSMD_CALLBACK_TYPE;
 
 enum 
