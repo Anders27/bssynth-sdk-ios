@@ -9,6 +9,12 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 
+static int callback_bounce (int percent, void *user)
+{
+    NSLog (@"Bouncing... %d", percent);
+    return 0;
+}
+
 @interface ViewController ()
 {
     NSTimer *timer;
@@ -103,6 +109,21 @@
     if (appDelegate.api->isPlaying (appDelegate.handle) == 1) {
         appDelegate.api->stop (appDelegate.handle);
         [timer invalidate];
+    }
+}
+
+- (IBAction)bounce:(id)sender
+{
+    AppDelegate *appDelegate = (AppDelegate *) [[UIApplication sharedApplication]delegate];
+    if (appDelegate.api->isPlaying (appDelegate.handle) == 0) {
+        NSString *root = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES) objectAtIndex:0];
+        NSString *path = [root stringByAppendingPathComponent:@"bounced.wav"];
+        if (appDelegate.api->bounce (appDelegate.handle, [path cStringUsingEncoding:NSUTF8StringEncoding], BSMP_WAVE_FILE_RIFF, callback_bounce, NULL) == BSMP_OK) {
+            NSLog (@"Bounce completed");
+        }
+        else {
+            NSLog (@"Bounce failed by error");
+        }
     }
 }
 

@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -43,6 +49,17 @@
                                 <state key="normal" image="button_pause"/>
                                 <connections>
                                     <action selector="stop:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HbA-lw-TFY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f10-YK-LxL">
+                                <rect key="frame" x="102" y="61" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8mK-vy-WRb"/>
+                                    <constraint firstAttribute="width" constant="70" id="d9q-jO-GPT"/>
+                                </constraints>
+                                <state key="normal" title="Bounce"/>
+                                <connections>
+                                    <action selector="bounce:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="NoX-h9-4v3"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="LyC-86-I6s">
@@ -139,8 +156,10 @@
                             <constraint firstItem="ftj-8K-mPG" firstAttribute="centerX" secondItem="qfg-aF-DEe" secondAttribute="centerX" id="cF5-5D-iVA"/>
                             <constraint firstItem="kRW-cN-vc4" firstAttribute="leading" secondItem="9Fj-u9-g5s" secondAttribute="trailing" constant="30" id="i7G-Zs-e3U"/>
                             <constraint firstItem="uUL-gO-9NR" firstAttribute="top" secondItem="kRW-cN-vc4" secondAttribute="bottom" constant="8" id="jWs-DB-Pih"/>
+                            <constraint firstItem="f10-YK-LxL" firstAttribute="centerY" secondItem="nml-cF-S5F" secondAttribute="centerY" id="k9x-RO-AVW"/>
                             <constraint firstItem="VbH-Lf-XLP" firstAttribute="centerX" secondItem="kRW-cN-vc4" secondAttribute="centerX" id="tIu-HA-yxQ"/>
                             <constraint firstItem="uUL-gO-9NR" firstAttribute="centerX" secondItem="kRW-cN-vc4" secondAttribute="centerX" id="tzd-gJ-Ml5"/>
+                            <constraint firstItem="f10-YK-LxL" firstAttribute="leading" secondItem="nml-cF-S5F" secondAttribute="trailing" constant="8" id="vNn-Xy-p4s"/>
                             <constraint firstItem="zZZ-qb-Iem" firstAttribute="centerX" secondItem="VbH-Lf-XLP" secondAttribute="centerX" id="yM3-SM-0oZ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="9Fj-u9-g5s" secondAttribute="leading" id="zSF-n0-oeW"/>
                         </constraints>
@@ -160,10 +179,5 @@
         <image name="button_pause" width="64" height="64"/>
         <image name="button_start" width="64" height="64"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
-    </simulatedMetricsContainer>
     <color key="tintColor" red="0.0" green="0.0" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
